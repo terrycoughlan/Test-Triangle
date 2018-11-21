@@ -1,15 +1,21 @@
 <div class="wrapper">
-    <div class="sidebar" data-color="danger" data-background-color="white" data-image="./assets/img/sidebar-1.jpg">
-        <app-sidebar></app-sidebar>
-        <div class="sidebar-background" style="background-image: url(./assets/img/sidebar-4.jpg)"></div>
+  <div class="sidebar" data-color="danger" data-background-color="white" data-image="./assets/img/sidebar-1.jpg">
+    <app-sidebar></app-sidebar>
+    <div class="sidebar-background" style="background-image: url(./assets/img/sidebar-4.jpg)"></div>
+  </div>
+  <div class="main-panel">
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet>
+    <div class="col-lg-12 col-md-12">
+      <div class="card">
+        <div class="card-header card-header-rose positionCalendar">
+          <span>Calendar</span>
+        </div>
+        <div class="card-body">
+          <app-calendar></app-calendar>
+        </div>
+      </div>
     </div>
-    <div class="main-panel">
-        <app-navbar></app-navbar>
-        <router-outlet></router-outlet>
-        <app-calendar></app-calendar>
-        <app-footer></app-footer>
-        <!--<div *ngIf="isMaps('maps')">-->
-            <!--<app-footer></app-footer>-->
-        <!--</div>-->
-    </div>
+    <app-footer></app-footer>
+  </div>
 </div>

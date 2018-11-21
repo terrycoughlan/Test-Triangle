@@ -128,16 +128,16 @@ export class DashboardComponent implements OnInit {
 
     var responsiveOptions: any[] = [
       ['screen and (min-width: 640px)', {
-        chartPadding: 10,
-        labelOffset: 100,
+        chartPadding: 5,
+        labelOffset: 20,
         labelDirection: 'explode',
         labelInterpolationFnc: function(value) {
           return value;
         }
       }],
       ['screen and (min-width: 1024px)', {
-        labelOffset: 80,
-        chartPadding: 20
+        labelOffset: 40,
+        chartPadding: 10
       }]
     ];
 

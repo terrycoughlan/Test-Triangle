@@ -8,7 +8,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { FullCalendarModule } from 'ng-fullcalendar';
 import { DashCalenComponent } from './calendar/calendar.component';
 
-import { EventSesrvice } from './calendar/calendar.service';
+import { EventService } from './calendar/calendar.service';
 
 @NgModule({
   imports: [
@@ -28,6 +28,6 @@ import { EventSesrvice } from './calendar/calendar.service';
     SidebarComponent,
     DashCalenComponent
   ],
-  providers: [ EventSesrvice ]
+  providers: [ EventService ]
 })
 export class ComponentsModule { }

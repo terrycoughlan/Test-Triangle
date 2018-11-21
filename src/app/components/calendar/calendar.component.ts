@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CalendarComponent } from 'ng-fullcalendar';
 import { Options } from 'fullcalendar';
-import { EventSesrvice } from './calendar.service';
+import { EventService } from './calendar.service';
 
 @Component({
   selector: 'app-calendar',
@@ -9,34 +9,31 @@ import { EventSesrvice } from './calendar.service';
   styleUrls: [ './calendar.component.css' ]
 })
 export class DashCalenComponent implements OnInit  {
+  getCalendarEvents: object;
   calendarOptions: Options;
   displayEvent: any;
   events = null;
   @ViewChild(CalendarComponent) ucCalendar: CalendarComponent;
-  constructor(protected eventService: EventSesrvice) { }
+  constructor(
+    protected eventService: EventService
+  ) { }
 
   ngOnInit() {
-    this.calendarOptions = {
-      editable: true,
-      eventLimit: false,
-      header: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'month,agendaWeek,agendaDay,listMonth'
-      },
-      events: []
-    };
-  }
-  loadevents() {
     this.eventService.getEvents().subscribe(data => {
-      this.events = data;
+      this.calendarOptions = {
+        editable: true,
+        eventLimit: false,
+        header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'month,agendaWeek,agendaDay,listMonth'
+        },
+        events: data
+      };
     });
   }
   clickButton(model: any) {
     this.displayEvent = model;
-  }
-  dayClick(model: any) {
-    console.log(model);
   }
   eventClick(model: any) {
     model = {

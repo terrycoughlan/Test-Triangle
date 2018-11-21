@@ -12,7 +12,6 @@ import { AppComponent } from './app.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-// import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   imports: [
@@ -26,8 +25,8 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    // DashboardComponent
   ],
+
   bootstrap: [AppComponent],
   providers: []
 })
