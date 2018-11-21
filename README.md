@@ -13,6 +13,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Calendar
 
+Implemented from `https://www.npmjs.com/package/ng-fullcalendar`<br />
 Events can be dragged and dropped to different days
 
 ```
